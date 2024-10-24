@@ -126,7 +126,7 @@ The `output` directory contains:
 To create Instanced 3D Models from the DTB points, we will use i3dm.export. This is also a Docker image available in the Geodan repository (`geodan/i3dm.export`).
 
 ```shell
-docker run -v $(pwd)/output_i3dm:/app/output -it --network="host" geodan/i3dm.export -c "Host=host.docker.internal;Username=postgres;Password=postgres;Database=postgres;Port=5439" -t public.v_dtb_punt_andijk --max_features_per_tile 100 -o /app/output --use_external_model true
+docker run -v $(pwd)/output_i3dm:/app/output -it --network="host" geodan/i3dm.export -c "Host=localhost;Username=postgres;Password=postgres;Database=postgres;Port=5439" -t public.v_dtb_punt_andijk --max_features_per_tile 100 -o /app/output --use_external_model true
 ```
 
 *Command explanation*
